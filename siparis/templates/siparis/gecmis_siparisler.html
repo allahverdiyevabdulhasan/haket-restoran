@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="color: #333;">Keçmiş Siparişlərim</h2>
+<div class="siparis-list">
+    {% for siparis in gecmis_siparisler %}
+        <div class="siparis-card">
+            <h3 style="color: #007bff;">{{ siparis.YEMEK_ADI }}</h3>
+            <p>Müştəri: {{ siparis.MUSTERI_ADI }}</p>
+            <p>Toplam Tutar: {{ siparis.toplam_tutar }} AZN</p>
+            <p>Masa Nömrəsi: {{ siparis.MASA_NUMARASI }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
